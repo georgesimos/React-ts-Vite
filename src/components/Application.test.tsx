@@ -1,12 +1,12 @@
-import { render, screen, waitFor } from './utils/test-utils';
+import { render, screen, waitFor } from '../utils/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import useData from './hooks/useData';
-import App from './App';
-import { FinancialInstrument } from './types';
+import useData from '../hooks/useData';
+import Application from './Application';
+import { FinancialInstrument } from '../types';
 
-vi.mock('./hooks/useData');
+vi.mock('../hooks/useData');
 
-describe('App', () => {
+describe('Application', () => {
   afterEach(() => {
     vi.resetAllMocks();
   });
@@ -18,7 +18,7 @@ describe('App', () => {
       error: null,
     });
 
-    render(<App />);
+    render(<Application />);
     const loadingElement = screen.getByText(/Loading.../i);
     expect(loadingElement).toBeInTheDocument();
   });
@@ -32,7 +32,7 @@ describe('App', () => {
       error: new Error(errorMessage),
     });
 
-    render(<App />);
+    render(<Application />);
 
     const errorElement = await screen.findByText(`Error: ${errorMessage}`);
     expect(errorElement).toBeInTheDocument();
@@ -45,7 +45,7 @@ describe('App', () => {
       error: null,
     });
 
-    render(<App />);
+    render(<Application />);
 
     const errorElement = await screen.findByText('No data available');
     expect(errorElement).toBeInTheDocument();
@@ -62,7 +62,7 @@ describe('App', () => {
       error: null,
     });
 
-    render(<App />);
+    render(<Application />);
 
     await waitFor(() => expect(screen.getByText('AAPL')).toBeInTheDocument());
     expect(screen.getByText('GOOGL')).toBeInTheDocument();

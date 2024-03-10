@@ -1,4 +1,4 @@
-import { getColorClass } from './utils';
+import { getColorClass } from '../utils/utils';
 import {
   Table,
   TableHead,
@@ -8,10 +8,10 @@ import {
   TableCell,
   TableCaption,
   TableContainer,
-} from './components/Table';
+} from './Table';
 import React from 'react';
-import useSorting from './hooks/useSorting';
-import { FinancialInstrument } from './types';
+import useSorting from '../hooks/useSorting';
+import { FinancialInstrument } from '../types';
 
 interface ResultsProps {
   data: FinancialInstrument[];

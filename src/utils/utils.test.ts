@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { getColorClass } from './utils';
-import { AssetClass } from './types';
+import { AssetClass } from '../types';
 
 describe('getColorClass', () => {
   it('returns "bg-white" for asset class "Macro"', () => {

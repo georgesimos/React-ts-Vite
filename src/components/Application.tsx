@@ -1,8 +1,8 @@
-import Container from './components/Container';
-import useData from './hooks/useData';
+import Container from './Container';
+import useData from '../hooks/useData';
 import Results from './Results';
 
-function App() {
+function Application() {
   const { data, loading, error } = useData();
 
   if (loading) {
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Application;

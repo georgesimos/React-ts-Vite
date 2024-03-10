@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../utils';
+import { cn } from '../utils/utils';
 
 const Container = React.forwardRef<
   HTMLDivElement,
@@ -13,5 +13,7 @@ const Container = React.forwardRef<
     />
   );
 });
+
+Container.displayName = 'Container';
 
 export default Container;

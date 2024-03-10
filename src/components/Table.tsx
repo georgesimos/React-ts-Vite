@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../utils';
+import { cn } from '../utils/utils';
 import ChevronUpDownIcon from '../assets/chevron-up-down.svg';
 
 const TableContainer = React.forwardRef<
@@ -87,6 +87,15 @@ const TableCell = React.forwardRef<
     {...props}
   />
 ));
+
+TableContainer.displayName = 'TableContainer';
+Table.displayName = 'Table';
+TableCaption.displayName = 'TableCaption';
+TableHead.displayName = 'TableHead';
+TableHeader.displayName = 'TableHeader';
+TableBody.displayName = 'TableBody';
+TableRow.displayName = 'TableRow';
+TableCell.displayName = 'TableCell';
 
 export {
   TableContainer,

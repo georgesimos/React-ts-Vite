@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen, userEvent } from './utils/test-utils';
+import { render, screen, userEvent } from '../utils/test-utils';
 import Results from './Results';
-import { FinancialInstrument } from './types';
+import { FinancialInstrument } from '../types';
 
 const mockData: FinancialInstrument[] = [
   { ticker: 'AAPL', price: 150, assetClass: 'Equities' },
